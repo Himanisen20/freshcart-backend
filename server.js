@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //     console.log(error)
 // })
 
-mongoose.connect("mongodb+srv://himanisen:21IuXeaeblT2T7Ns@cluster0.vz6mqyn.mongodb.net/freshcart").then(
+mongoose.connect("mongodb+srv://jatin:6tCIAOaUB476kzkS@cluster0.vz6mqyn.mongodb.net/freshcart").then(
     () => { console.log("mongoose connected") }
 ).catch((error) => {
     console.log(error)
