@@ -21,8 +21,14 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//mongodb..... mongodb+srv://himanisen:21IuXeaeblT2T7Ns@cluster0.vz6mqyn.mongodb.net/ 
-mongoose.connect("mongodb://localhost:27017/freshcart").then(
+//mongodb..... 
+// mongoose.connect("mongodb://localhost:27017/freshcart").then(
+//     () => { console.log("mongoose connected") }
+// ).catch((error) => {
+//     console.log(error)
+// })
+
+mongoose.connect("mongodb+srv://himanisen:21IuXeaeblT2T7Ns@cluster0.vz6mqyn.mongodb.net/freshcart").then(
     () => { console.log("mongoose connected") }
 ).catch((error) => {
     console.log(error)
