@@ -389,6 +389,23 @@ app.get("/getcategory",async(req,res)=>{
     } 
 })
 
+//update category
+app.post("/updateCategory",async(req,res)=>{
+    console.log(req.body)
+     const update = await category.findOneAndUpdate(
+      { _id: req.body.edit._id},
+      { $set:{name:req.body.edit.name, product:req.body.edit.product,
+        image:req.body.edit.image,
+        status:req.body.edit.status } },
+      { new: true }
+    );
+     if (update) {
+      res.json({status:true});
+    } else {
+      res.json({ status:false});
+    }
+})
+
 //remove category
 app.post("/removecategory",async(req,res)=>{
     console.log(req.body)
